@@ -5,7 +5,7 @@ This app will auto-detect a user's timezone using JavaScript, then
 configure Django's timezone localization system accordingly. As a
 result, dates shown to users will be in their local timezones.
 
-Authored by `Adam Charnock <http://https://adamcharnock.com/>`_, and some great `contributors <https://github.com/adamcharnock/django-tz-detect/contributors>`_.
+Authored by `Adam Charnock <https://adamcharnock.com/>`_, and some great `contributors <https://github.com/adamcharnock/django-tz-detect/contributors>`_.
 
 .. image:: https://img.shields.io/pypi/v/django-tz-detect.svg
     :target: https://pypi.python.org/pypi/django-tz-detect/
@@ -21,6 +21,9 @@ Authored by `Adam Charnock <http://https://adamcharnock.com/>`_, and some great 
 
 .. image:: https://coveralls.io/repos/adamcharnock/django-tz-detect/badge.svg?branch=develop
     :target: https://coveralls.io/r/adamcharnock/django-tz-detect?branch=develop
+
+.. image:: https://landscape.io/github/adamcharnock/django-tz-detect/develop/landscape.svg?style=flat
+    :target: https://landscape.io/github/adamcharnock/django-tz-detect/develop
 
 How it works
 ------------
@@ -43,7 +46,7 @@ Installation
 
        pip install django-tz-detect
 
-2. Add ``tz_detect`` to your `INSTALLED_APPS`:
+2. Add ``tz_detect`` to your ``INSTALLED_APPS``:
 
    .. code-block:: python
 
@@ -65,10 +68,10 @@ Installation
 
    .. code-block:: python
 
-       urlpatterns = patterns('',
+       urlpatterns = [
            url(r'^tz_detect/', include('tz_detect.urls')),
            ...
-       )
+       ]
 
 5. Add the detection template tag to your site, ideally in your base layout just before the ``</body>`` tag:
 
